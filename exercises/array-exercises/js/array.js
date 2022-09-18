@@ -39,12 +39,8 @@ class ArrayFunctions {
   filterOut(arr, item) {
     const newArr = []
     for(let i = 0; i < arr.length; i++){
-      if(arr[i] == item){
-          continue;
-      }
-      else{
+      if(arr[i] != item)
         newArr.push(arr[i]);
-      }
     }
     return newArr;
   }
