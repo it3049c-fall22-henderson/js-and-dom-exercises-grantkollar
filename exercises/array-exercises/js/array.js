@@ -1,3 +1,5 @@
+const { filter } = require("cypress/types/bluebird");
+
 class ArrayFunctions {
   /**
    * Gets the index of a specific item in an array
@@ -8,7 +10,7 @@ class ArrayFunctions {
    * indexOf([1,2,3,5,6], 3); // 2
    */
   indexOf(arr, item) {
-    return ;
+    return arr.indexOf(item);
   }
 
   /**
@@ -20,7 +22,9 @@ class ArrayFunctions {
    */
   sum(arr) {
     // Hint: use the reduce method
-    return ;
+    let start = 0;
+    let sum = arr.reduce((previous,current) => previous + current, start);
+    return sum;
   }
 
   /**
@@ -33,7 +37,16 @@ class ArrayFunctions {
    * filter([1,2,3,5,6,2,4,2], 2); // [1,3,5,6,4]
    */
   filterOut(arr, item) {
-    return ;
+    const newArr = []
+    for(let i = 0; i < arr.length; i++){
+      if(arr[i] == item){
+          continue;
+      }
+      else{
+        newArr.push(arr[i]);
+      }
+    }
+    return newArr;
   }
 
   /**
