@@ -8,7 +8,7 @@ class ArrayFunctions {
    * indexOf([1,2,3,5,6], 3); // 2
    */
   indexOf(arr, item) {
-    return ;
+    return arr.indexOf(item);
   }
 
   /**
@@ -20,7 +20,9 @@ class ArrayFunctions {
    */
   sum(arr) {
     // Hint: use the reduce method
-    return ;
+    let start = 0;
+    let sum = arr.reduce((previous,current) => previous + current, start);
+    return sum;
   }
 
   /**
@@ -33,7 +35,12 @@ class ArrayFunctions {
    * filter([1,2,3,5,6,2,4,2], 2); // [1,3,5,6,4]
    */
   filterOut(arr, item) {
-    return ;
+    const newArr = []
+    for(let i = 0; i < arr.length; i++){
+      if(arr[i] != item)
+        newArr.push(arr[i]);
+    }
+    return newArr;
   }
 
   /**
@@ -46,6 +53,7 @@ class ArrayFunctions {
    */
   append(arr, item) {
     // hint: push, slice, splice would all work. Pay attention to the return value in the docs
+    arr.splice((arr.length),0,item)
     return arr;
   }
 
@@ -58,7 +66,8 @@ class ArrayFunctions {
    * concat([1,2,3], [4,5,6]); // [1,2,3,4,5,6]
    */
   concat(arr1, arr2) {
-    return ;
+    const combineArr = arr1.concat(arr2);
+    return combineArr;
   }
 
   /**
@@ -70,6 +79,7 @@ class ArrayFunctions {
    */
   square(arr) {
     // hint: use .map
-    return ;
+    const squaredArr = arr.map(x => (x * x));
+    return squaredArr;
   }
 }
