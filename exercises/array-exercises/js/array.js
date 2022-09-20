@@ -1,5 +1,3 @@
-const { filter } = require("cypress/types/bluebird");
-
 class ArrayFunctions {
   /**
    * Gets the index of a specific item in an array
@@ -55,8 +53,8 @@ class ArrayFunctions {
    */
   append(arr, item) {
     // hint: push, slice, splice would all work. Pay attention to the return value in the docs
-    
-    return arr.splice((arr.length), 0, item);
+    arr.splice((arr.length),0,item)
+    return arr;
   }
 
   /**
