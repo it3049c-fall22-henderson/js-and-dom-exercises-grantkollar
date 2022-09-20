@@ -10,7 +10,7 @@ class ArrayFunctions {
    * indexOf([1,2,3,5,6], 3); // 2
    */
   indexOf(arr, item) {
-    return arr.indexOf(item);
+    return arr.indexOf(item,arr);
   }
 
   /**
